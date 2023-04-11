@@ -1,0 +1,47 @@
+:root
+    {
+        --numberRows:16;
+    }
+
+*   {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+div.grid
+    {
+        height: 25px;
+        width: 25px;
+        border: 1px solid black;
+        margin:0px;
+        background-color: rgb(201, 223, 154);
+    }    
+
+body
+    {
+        background-color: rgb(154, 223, 200);
+       
+    }
+header
+    {
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    }
+div.container
+    {
+        height: 500px;
+        width: 100vw;
+        border: 1px solid magenta;
+        /* display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+        align-content: center; */
+        display: grid;
+        grid-template-columns: repeat(var(--numberRows), auto);
+        justify-content: center;
+        align-content: center;
+    
+    }
