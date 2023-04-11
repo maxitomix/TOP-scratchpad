@@ -1,4 +1,5 @@
 const gridSize = 100;
+
 // const container = document.getElementsByClassName('container')[0];
 const container = document.getElementById('container')
 
@@ -16,18 +17,31 @@ for (let i=0; i<gridSize*gridSize; i++)
 container.style.setProperty('--numberRows', gridSize);
 
 
+
 const grid_items = document.querySelectorAll('.grid');
-grid_items.forEach((element) => {
-    element.addEventListener('mouseover', () => {
-      element.classList.add('passed');
-    })});
- 
+
 function removePassed()
 {
     grid_items.forEach((element) => {element.classList.remove('passed')})
 }  
 
-
-
 const btnReset = document.querySelector('#reset');
 btnReset.addEventListener('click', removePassed)
+
+let isPressed = false;
+document.addEventListener('mousedown',function(){
+    isPressed = true;
+});
+document.addEventListener('mouseup',function(){
+    isPressed = false;
+});
+
+document.addEventListener('mousemove',function(){
+console.log("isPressed", isPressed)
+});
+
+grid_items.forEach((element) => {
+    element.addEventListener('mouseover', () => { 
+        if (isPressed)
+    element.classList.add('passed');
+    })});
