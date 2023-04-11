@@ -8,13 +8,19 @@
         padding:0;
         box-sizing: border-box;
     }
+
 div.grid
     {
-        height: 25px;
-        width: 25px;
-        border: 1px solid black;
+        height: 6px;
+        width: 6px;
+        /* border: 1px solid black; */
         margin:0px;
         background-color: rgb(201, 223, 154);
+    }    
+
+div.passed
+    {
+        background-color: black;
     }    
 
 body
@@ -22,6 +28,7 @@ body
         background-color: rgb(154, 223, 200);
        
     }
+    
 header
     {
     padding: 10px;
@@ -29,9 +36,10 @@ header
     justify-content:space-between;
     align-items: center;
     }
+
 div.container
     {
-        height: 500px;
+        /* height: 500px; */
         width: 100vw;
         border: 1px solid magenta;
         /* display: flex;
